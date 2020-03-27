@@ -1,0 +1,53 @@
+	Прво креирав, нов директориум со командата mkdir, влегов во него со cd, иницијализирав git: git init, па го клонирав репозиториумот со линкот: git clone <link>.
+Го преименував локалниот репозиториум mv <current_name> <new_name>, влегов во репозиториумот. Ги излистав сите гранки: git branch -a и го избришав remote-репозиториумот: git remote remove origin.
+Го поврзав локалниот репозиториум со новиот креиран remote-repo: git remote add <link>, и го синхронизирав локалниот со remote-repo: git push -u master. Креирав нова .csv датотека: cat > items.csv.
+За впишување во .txt/.csv датотеки користев nano <name>. Откако внесов податоци во директориумот тој премина во 'untracked' stage, па прво направив git add items.csv па git commit -a -m "items.csv file added",
+и синхронизирав со git push --all, бидејќи во моментов на овој git проект работам само јас нема потреба од git pull прво па git push, како што би било правилно во текот на работата. Откако ги внесов промените
+во класата Item.java таа влезе во 'untracked' stage, па прво git add <name> -> git commit -a -m "tax type variable added", исто и за точка 13 и 14,
+прво git add<name> -> git commit -a -m "taxReturn method finished". git push --all. Креирав нова гранка со git branch <name> и се префрлив на неа со git checkout <name>.
+Точката 16 и 17 ги направив со nano <name>. Па прво git add<> -> git commit -a -m "Tocka 18"(оставив порака-точката во задачата што е), и на крај git push --all.
+За спојување на branch-от со master-от: git checkout master; git merge receiptFeature. Не ми појави конфликт бидејќи не направив прво pull па push, како што требаше и ова ми беше грешка. Промените во .csv 
+директориумот се презапишаа. Правилно ќе беше прво да направам pull па push, за во случај да има конфликти да се евидентираат разликите и да се сведи на едно 'решение'. На крај направив push --all. 
+
+Историја на сите commits (git log):
+
+commit 8b6310a98a193c221d13f841da1c729593de54fc (HEAD -> master, origin/master)
+Merge: 719f848 f65f088
+Author: Boris Djotov <borisdzotov@gmail.com>
+Date:   Fri Mar 27 21:11:04 2020 +0100
+
+    Merge branch 'receiptFeature'
+
+commit f65f0888637e48a2316233fae2f8731ac4713a62 (origin/receiptFeature, receiptFeature)
+Author: Boris Djotov <borisdzotov@gmail.com>
+Date:   Fri Mar 27 21:00:03 2020 +0100
+
+    Tocka 18
+
+commit 719f848fddd038a7dbfc8740251827e4b9596151
+Author: Boris Djotov <borisdzotov@gmail.com>
+Date:   Fri Mar 27 15:04:09 2020 +0100
+
+    taxReturn method finished
+
+commit 297acbfa48f1b4bf319657b109d2028948c238c8
+Author: Boris Djotov <borisdzotov@gmail.com>
+Date:   Fri Mar 27 14:34:17 2020 +0100
+
+    tax type variable added
+
+commit 90172207c10432617057098dd7b3067670f073cb
+Author: Boris Djotov <borisdzotov@gmail.com>
+Date:   Fri Mar 27 14:24:41 2020 +0100
+
+    items.csv file added
+
+commit 92d0dc52a7865253394d737c3e4f248565f24584
+Author: Stefan Andonov <stefan5andonov@yahoo.com>
+Date:   Thu Mar 12 17:42:31 2020 +0100
+
+    initial commit
+
+
+
+Линк до мојот репозиториум: https://github.com/wizard4e/SI_lab1_gr3_185022.git
